@@ -29,11 +29,11 @@ architecture arch of Division is
 		 novoNum, acabou, carga, cargaM: out std_logic);
    end component;
 	 	
-signal novoNum, nZero, carga, cargaM: std_logic;
+signal tnovoNum, tnZero, tcarga, tcargaM: std_logic;
 
 begin
 
-    bo1: bo port map (M, Q, clk, novoNum, carga, cargaM, quotient, remainder, nZero);
-    bc1: controle port map (clk, nZero, reset, novoNum, acabou, carga, cargaM);
+    bo1: bo port map (M, Q, clk, tnovoNum, tcarga, tcargaM, quotient, remainder, tnZero);
+    bc1: controle port map (clk, tnZero, reset, tnovoNum, acabou, tcarga, tcargaM);
 
 end arch;

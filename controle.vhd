@@ -23,8 +23,6 @@ begin
             eAtual <= start;
         elsif (clk'event AND clk = '1') then
             eAtual <= eProx;
-        else
-				eAtual <= start;
 		  end if;
     end process;
     

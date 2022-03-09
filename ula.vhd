@@ -22,8 +22,7 @@ um <= Qshift(X - 1 downto 1) & '0' & Ashift;
 with ulaop select
 	temp <= um when '1',
 			  zero when '0',
-			  (others => 'U') when others; -- mudar para indicar operacoes invalidas
-
+			  (others => 'U') when others;
 				
 AF <= temp(X - 1 downto 0);
 QF <= temp(X + X - 1 downto X);			
